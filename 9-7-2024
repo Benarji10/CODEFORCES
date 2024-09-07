@@ -30,3 +30,34 @@ int main() {
  
     return 0;
 }
+
+
+
+////////////1831A/////////
+
+#include <bits/stdc++.h>
+using namespace std;
+void solve(){
+    int n,mini=INT_MAX,maxi=INT_MIN;
+    cin>>n;
+    int arr[n-1];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        mini=min(mini,arr[i]);
+        maxi=max(maxi,arr[i]);
+    }
+    int sum=mini+maxi;
+    for(int i=0;i<n;i++){
+        cout<<sum-arr[i]<<" ";
+    }
+    cout<<endl;
+}
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+
+    return 0;
+}
